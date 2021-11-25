@@ -1,0 +1,230 @@
+/* ESTRUCTURA */ 
+
+.wrapper {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .modal {
+        height: 310px;
+        width: 710px;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+        display: flex;
+        padding: 30px;
+    }
+
+        .leftPanel {
+            min-width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0px ;
+        }
+
+            .displayContainer {
+                flex-basis: 100%;
+                text-align: center;
+            }
+
+        .rightPanel {
+             padding: 0px 30px;
+             display: flex;
+             flex-direction: column;
+
+        }
+
+
+/* INFO */ 
+
+.info {
+    flex-basis: 100%;
+}
+    .info .title {
+        color:rgb(102, 102, 102);
+        font-size: 36px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        margin-bottom: 10px;
+
+    }
+    .info .description {
+        color:rgb(102, 102, 102);
+        font-size:16px;
+        font-family: 'Noto Sans', sans-serif;
+
+    }
+
+
+/* SELECTOR DE COLOR */ 
+/* El código para el selector de colores es una versión modificada del de w3schools.com (incluyendo sus comentarios), de hacerlo con javascript probablemente utilizaría elementos <a> para lograr el mismo efecto. No me gusta usar radios para acciones, pero consideré que para los propositos del ejecricio era suficiente siendo que no necesita ser funcional. */
+
+.colorSelector {
+    display: inline-flex;
+}
+
+    /* Customize the label (the container) */
+    .colorOption {
+      display: block;
+      position: relative;
+      margin-bottom: 48px;
+      padding-left: 35px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* Hide the browser's default radio button */
+    .colorOption input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    /* Create a custom radio button */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+
+        /* Agregar color a cada opción */
+        .colorOption:nth-child(1) .checkmark {background: #CCCCCC;}
+        .colorOption:nth-child(2) .checkmark {background: #666666;}
+        .colorOption:nth-child(3) .checkmark {background: #5A90BC;}
+        .colorOption:nth-child(4) .checkmark {background: #FFEDDA;}
+
+    /* On mouse-over */
+    .colorOption:hover input ~ .checkmark {
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    /* When the radio button is checked, add a blue background */
+    .colorOption input:checked ~ .checkmark {
+      background-color: #FFF;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    .colorOption input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .colorOption .checkmark:after {
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+        /* Agregar color a cada opción cuando está seleccionada */
+        .colorOption:nth-child(1) .checkmark:after {background: #CCCCCC;}
+        .colorOption:nth-child(2) .checkmark:after {background: #666666;}
+        .colorOption:nth-child(3) .checkmark:after {background: #5A90BC;}
+        .colorOption:nth-child(4) .checkmark:after {background: #FFEDDA;}
+
+
+/* OPCIONES DE COMPRA */ 
+
+.buyingOptions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+}
+    .price {
+        font-size: 36px;
+        color: #666666;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+
+
+/* BOTONES */ 
+
+.btn {  
+    display: inline-block;
+    border:0px;   
+    text-decoration:none; 
+}
+
+/* ----- NAVEGACIÓN SLIDER */ 
+    .round {
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          margin: 0px 5px;
+
+    }
+
+    .round:hover {
+        background-color:rgb(90 144 188 / 75%);
+    }
+
+    .round:active {
+        position:relative;
+        bottom:1px; 
+    }
+    .arrow {
+      background: url(/ASSETS/arrow_right_white_24px.svg) no-repeat center center rgba(90, 144, 188, 0.5); 
+
+    }
+    .inverted {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+
+/* ----- COMPRAR */ 
+    .square {
+        background-color:#88C9F6;
+        border-radius:6px;
+        cursor:pointer;
+        color:#fff;
+        font-family: 'Noto Sans', sans-serif;
+        font-size:14px;
+        padding:11px 30px;
+        margin-left:auto;
+
+    }
+    .square:hover {
+        background-color:#5fbdff;
+    }
+    .square:active {
+        position:relative;
+        bottom:1px;
+    }
